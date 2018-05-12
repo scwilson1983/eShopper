@@ -1,8 +1,0 @@
-version: '3'
-
-services:
-  eshopper:
-    image: eshopper
-    build:
-      context: .
-      dockerfile: eShopper\Dockerfile
