@@ -3,8 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Paramore.Brighter.AspNetCore;
-using Ports;
-using Ports.CommandSetup;
 using Ports.Handlers;
 
 namespace eShopper

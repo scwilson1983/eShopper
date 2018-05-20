@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "1081533877016d4f3e368dfb5b1e9c2089298990"
   },
   "compilationOptions": {},
   "targets": {
@@ -14,6 +14,47 @@
           "Adapters.dll": {}
         }
       },
+      "Microsoft.Extensions.DependencyInjection/2.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Paramore.Brighter/7.3.15": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "Polly": "5.9.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/Paramore.Brighter.dll": {}
+        }
+      },
+      "Paramore.Brighter.AspNetCore/1.0.11": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Paramore.Brighter": "7.3.15"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Paramore.Brighter.AspNetCore.dll": {}
+        }
+      },
+      "Polly/5.9.0": {
+        "runtime": {
+          "lib/netstandard1.1/Polly.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "runtime": {
           "Domain.dll": {}
@@ -21,7 +62,8 @@
       },
       "Ports/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Paramore.Brighter.AspNetCore": "1.0.11"
         },
         "runtime": {
           "Ports.dll": {}
@@ -34,6 +76,48 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyInjection/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wakg18gHYiUL1pcjjyZuYk6OvDpbSw1E7IWxm78TMepsr+gQ8W0tWzuRm0q/9RFblngwPwo15rrgZSUV51W5Iw==",
+      "path": "microsoft.extensions.dependencyinjection/2.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eUdJ0Q/GfVyUJc0Jal5L1QZLceL78pvEM9wEKcHeI24KorqMDoVX+gWsMGLulQMfOwsUaPtkpQM2pFERTzSfSg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Paramore.Brighter/7.3.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5S74M+X/pX5t4jDDLka/7FeZTnLdgkh7/JRTnEKo+8bA8W2Klys7ZMi300jPmDYFxkRPbmyG3786wN46IKSfRg==",
+      "path": "paramore.brighter/7.3.15",
+      "hashPath": "paramore.brighter.7.3.15.nupkg.sha512"
+    },
+    "Paramore.Brighter.AspNetCore/1.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hJNeWHdmOXG1AEy0NN7i23PAkwBgK3xH1GIzuV355vxRbBtzxHViS2f0tC3g+Wm/FXEtnAebIVGaKAdaEVYDYg==",
+      "path": "paramore.brighter.aspnetcore/1.0.11",
+      "hashPath": "paramore.brighter.aspnetcore.1.0.11.nupkg.sha512"
+    },
+    "Polly/5.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gu6lokaAOpj71lu9n2AZaQ0kh8sh24FO54gGEktJwgBXg39gOSoI37pkaRERSKQma/hoL56Gbj30i1EpOb3a1g==",
+      "path": "polly/5.9.0",
+      "hashPath": "polly.5.9.0.nupkg.sha512"
     },
     "Domain/1.0.0": {
       "type": "project",
