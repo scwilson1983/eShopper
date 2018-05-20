@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: order-db-service
+  name: eshopper-db-service
 spec:
   selector:
-    app: order-db
-  #type: NodePort - uncomment to reach mongo from minikube
+    app: eshopper-db
+  type: NodePort
   ports:
   - name: mongo
     port: 27017

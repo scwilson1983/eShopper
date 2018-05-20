@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: order-api
+  name: eshopper-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: order-api
+      app: eshopper-api
   template:
     metadata:
       labels:
-        app: order-api
+        app: eshopper-api
     spec:
       containers:
-      - name: order-api
-        image: scwilson1983/hello-docker:latest
+      - name: eshopper-api
+        image: scwilson1983/eshopper:latest
         ports:
         - containerPort: 443

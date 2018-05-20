@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: order-db
+  name: eshopper-db
 spec:
   selector:
     matchLabels:
-      app: order-db
+      app: eshopper-db
   template:
     metadata:
       labels:
-        app: order-db
+        app: eshopper-db
     spec:
       containers:
-      - name: order-db
+      - name: eshopper-db
         image: mongo:latest
         ports:
         - containerPort: 27017
