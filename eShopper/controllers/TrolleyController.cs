@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Paramore.Brighter;
-using Ports.Commands;
 using System;
+using Ports.Commands;
 
 namespace eShopper.controllers
 {
@@ -17,7 +17,7 @@ namespace eShopper.controllers
         }
 
         [HttpPost]
-        public IActionResult AddItem(AddItemToTrolleyCommand command)
+        public IActionResult AddItem([FromBody]AddItemToTrolleyCommand command)
         {
             command.Id = Guid.NewGuid();
             commandProcessor.Send(command);
