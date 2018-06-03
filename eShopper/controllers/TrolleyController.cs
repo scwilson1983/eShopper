@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Paramore.Brighter;
 using System;
-using Ports.Commands;
+using Ports.Trolley;
+using System.Threading.Tasks;
 
 namespace eShopper.controllers
 {
@@ -17,10 +18,10 @@ namespace eShopper.controllers
         }
 
         [HttpPost]
-        public IActionResult AddItem([FromBody]AddItemToTrolleyCommand command)
+        public async Task<IActionResult> AddItem([FromBody]AddItemToTrolleyCommand command)
         {
             command.Id = Guid.NewGuid();
-            commandProcessor.Send(command);
+            await commandProcessor.SendAsync(command).ConfigureAwait(false);
             return Ok();
         }
     }

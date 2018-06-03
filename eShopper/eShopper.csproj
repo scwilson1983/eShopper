@@ -18,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Config\Config.csproj" />
+    <ProjectReference Include="..\Dependencies\Dependencies.csproj" />
     <ProjectReference Include="..\Ports\Ports.csproj" />
   </ItemGroup>
 

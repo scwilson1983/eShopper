@@ -1,7 +1,7 @@
 ﻿using System;
 using Paramore.Brighter;
 
-namespace Ports.Commands
+namespace Ports.Trolley
 {
     public class AddItemToTrolleyCommand : IRequest
     {
