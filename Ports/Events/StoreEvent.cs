@@ -4,13 +4,14 @@ namespace Ports.Events
 {
     public class StoreEvent<T> where T : class
     {
-        public StoreEvent(T body)
+        public StoreEvent(T body, string type)
         {
+            this.Type = type;
             TimeGenerated = DateTime.UtcNow;
             Body = body;
         }
-        public string Type => typeof(T).Name;
-        public DateTime TimeGenerated { get; set; }
-        public T Body { get; set; }
+        public string Type { get; }
+        public DateTime TimeGenerated { get; }
+        public T Body { get; }
     }
 }
